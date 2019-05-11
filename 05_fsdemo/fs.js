@@ -5,11 +5,11 @@ fs.readdir('demo', (err, dir) => {
     console.log(dir);
     for (let index = 0; index < dir.length; index++) {
       const element = dir[index];
-      console.log(element);
+      console.log('element',element);
       fs.stat(dir[index], (err, stat) => {
-        if(stat.isDirectory) {
-          console.log(dir[index]);
-        }
+        // if(stat.isDirectory) {
+          console.log('stat',stat);
+        // }
       })
     }
   }
