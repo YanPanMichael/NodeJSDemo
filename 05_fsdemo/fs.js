@@ -1,13 +1,13 @@
 var fs = require('fs');
 
+var resArr = [];
 fs.readdir('demo', (err, dir) => {
   if(!err) {
     console.log(dir);
-    var resArr = [];
     //不用高级方法表达式，使用回调函数
     (function loop(index){
       if(index === dir.length) {
-        console.log(resArr, resArr);
+        console.log('resArr', resArr);
         return false;
       }
       const element = dir[index];
